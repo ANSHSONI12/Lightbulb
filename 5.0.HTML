@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Light Bulb Binary Calculator</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h2>Light Bulb Binary Calculator</h2>
+<p>Add in binary using the light bulbs below. 
+
+<p>  
+<button onclick="document.getElementById('myImage').src='light_on.png'">1</button>
+
+<img id="myImage" src="light_off.png" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='light_off.png'">0</button>
+
+
+<button onclick="document.getElementById('myImage3').src='light_on.png'">1</button>
+
+<img id="myImage3" src="light_off.png" style="width:100px">
+
+<button onclick="document.getElementById('myImage3').src='light_off.png'">0</button> +
+
+
+
+<button onclick="document.getElementById('myImage5').src='light_on.png'">1</button>
+
+<img id="myImage5" src="light_off.png" style="width:100px">
+
+<button onclick="document.getElementById('myImage5').src='light_off.png'">0</button>
+
+
+<button onclick="document.getElementById('myImage7').src='light_on.png'">1</button>
+
+<img id="myImage7" src="light_off.png" style="width:100px">
+
+<button onclick="document.getElementById('myImage7').src='light_off.png'">0</button>
+
+
+</p>
+<br>
+<br>
+<p>  
+<img id="myImage2" src="light_off.png" style="width:100px">
+
+
+<img id="myImage4" src="light_off.png" style="width:100px">
+
+
+<img id="myImage6" src="light_off.png" style="width:100px">
+
+<br>
+<button onclick=showResults()>Show Result</button>
+
+
+
+<p id="demo"></p>
+
+</p>
+
+  <script>
+    function showResults(){
+      var img = document.getElementById('myImage');
+      var src = img.getAttribute('src');
+      if (src == 'light_on.png'){
+	  	var pic1 = 1;
+      }
+      else{
+      	var pic1 = 0;
+      }
+      
+      var img2 = document.getElementById('myImage3');
+      var src2 = img2.getAttribute('src');
+      if (src2 == 'light_on.png'){
+	  	var pic2 = 1;
+      }
+      else{
+	  	var pic2 = 0;
+      }
+
+      var img3 = document.getElementById('myImage5');
+      var src3 = img3.getAttribute('src');
+      if (src3 == 'light_on.png'){
+	  	var pic3 = 1;
+      }
+      else{
+	  	var pic3 = 0;
+      }
+
+      var img4 = document.getElementById('myImage7');
+      var src4 = img4.getAttribute('src');
+      if (src4 == 'light_on.png'){
+	  	var pic4 = 1;
+      }
+      else{
+	  	var pic4 = 0;
+      }
+      
+      
+      if (pic1 == 0 && pic2 == 0 && pic3 == 0 && pic4 == 0) {
+        document.getElementById('myImage2').src='light_off.png';
+        document.getElementById('myImage4').src='light_off.png';
+        document.getElementById('myImage6').src='light_off.png';
+      }
+
+      if (pic1 == 0 && pic2 == 0 && pic3 == 0 && pic4 == 1) {
+        document.getElementById('myImage2').src='light_off.png';
+        document.getElementById('myImage4').src='light_off.png';
+        document.getElementById('myImage6').src='light_on.png';
+      }
+
+      if (pic1 == 0 && pic2 == 0 && pic3 == 1 && pic4 == 0) {
+        document.getElementById('myImage2').src='light_off.png';
+        document.getElementById('myImage4').src='light_on.png';
+        document.getElementById('myImage6').src='light_off.png';
+      }
+      
+      if (pic1 == 0 && pic2 == 1 && pic3 == 0 && pic4 == 0) {
+        document.getElementById('myImage2').src='light_off.png';
+        document.getElementById('myImage4').src='light_off.png';
+        document.getElementById('myImage6').src='light_on.png';
+      }
+      
+      if (pic1 == 1 && pic2 == 0 && pic3 == 0 && pic4 == 0) {
+        document.getElementById('myImage2').src='light_off.png';
+        document.getElementById('myImage4').src='light_on.png';
+        document.getElementById('myImage6').src='light_off.png';
+      }
+      
+      if (pic1 == 1 && pic2 == 1 && pic3 == 0 && pic4 == 0) {
+        document.getElementById('myImage2').src='light_off.png';
+        document.getElementById('myImage4').src='light_on.png';
+        document.getElementById('myImage6').src='light_on.png';
+      }
+      
+      if (pic1 == 1 && pic2 == 1 && pic3 == 1 && pic4 == 0) {
+        document.getElementById('myImage2').src='light_on.png';
+        document.getElementById('myImage4').src='light_off.png';
+        document.getElementById('myImage6').src='light_on.png';
+      }
+
+      if (pic1 == 1 && pic2 == 1 && pic3 == 1 && pic4 == 1) {
+        document.getElementById('myImage2').src='light_on.png';
+        document.getElementById('myImage4').src='light_on.png';
+        document.getElementById('myImage6').src='light_off.png';
+      }
+
+      if (pic1 == 0 && pic2 == 1 && pic3 == 1 && pic4 == 1) {
+        document.getElementById('myImage2').src='light_on.png';
+        document.getElementById('myImage4').src='light_off.png';
+        document.getElementById('myImage6').src='light_off.png';
+      }
+
+      if (pic1 == 0 && pic2 == 1 && pic3 == 0 && pic4 == 1) {
+        document.getElementById('myImage2').src='light_off.png';
+        document.getElementById('myImage4').src='light_on.png';
+        document.getElementById('myImage6').src='light_off.png';
+      }
+      
+      if (pic1 == 1 && pic2 == 0 && pic3 == 1 && pic4 == 0) {
+        document.getElementById('myImage2').src='light_on.png';
+        document.getElementById('myImage4').src='light_off.png';
+        document.getElementById('myImage6').src='light_off.png';
+      }     
+      
+      if (pic1 == 1 && pic2 == 0 && pic3 == 0 && pic4 == 1) {
+        document.getElementById('myImage2').src='light_off.png';
+        document.getElementById('myImage4').src='light_on.png';
+        document.getElementById('myImage6').src='light_on.png';
+      }  
+   
+      if (pic1 == 1 && pic2 == 1 && pic3 == 0 && pic4 == 1) {
+        document.getElementById('myImage2').src='light_on.png';
+        document.getElementById('myImage4').src='light_off.png';
+        document.getElementById('myImage6').src='light_off.png';
+      }   
+   
+      if (pic1 == 0 && pic2 == 0 && pic3 == 1 && pic4 == 1) {
+        document.getElementById('myImage2').src='light_off.png';
+        document.getElementById('myImage4').src='light_on.png';
+        document.getElementById('myImage6').src='light_on.png';
+      }
+    }
+  
+</script>
+</body>
